@@ -1,7 +1,6 @@
 require('dotenv').config()
 
 const express = require('express')
-const bodyParser = require('body-parser')
 const cors = require('cors')
 
 const app = express()
@@ -19,7 +18,6 @@ const port = process.env.PORT || 3333
 
 app.use(
     cors(),
-    bodyParser(),
     express.json(),
     GastoRoute,
     SaldoRoute,
@@ -37,5 +35,10 @@ app.get('/', (req,res) => {
     res.send('Anotando gastos')
 })
 
-db.once('open', () => {console.log('MongoDB conectado')})
-db.on('error', () => {console.log('Erro ao conectar com MongoDB')})
+db.once('open', () => {
+    console.log('MongoDB conectado')
+})
+ 
+db.on('error', () => {
+    console.log('Erro ao conectar com MongoDB')
+})
