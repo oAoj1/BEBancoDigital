@@ -1,6 +1,8 @@
+require('dotenv').config()
+
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb+srv://joao:123@cluster0.uciigzh.mongodb.net/lista-gastos')
+mongoose.connect(process.env.MONGO_CONNECTION)
 
 let db = mongoose.connection
 

@@ -107,6 +107,11 @@ async function filtrarGastos(req,res){
                 console.log(err)
             })
 
+        if(classificacao == ''){
+            const todosGastos = await gastos.find()
+            res.send(todosGastos)
+        }
+        
     }catch(error){
         console.log(error.message)
     }

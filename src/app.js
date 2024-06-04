@@ -14,7 +14,7 @@ const DepositoRoute = require('./routes/DepositoRoute.js')
 const SomasGeraisRoute = require('./routes/SomasGeraisRoute.js')
 const SaldoDivididoRoute = require('./routes/SaldoDivididoRoute.js')
 
-const port = process.env.PORT || 3333
+const port = process.env.PORT
 
 app.use(
     cors(),

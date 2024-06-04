@@ -6,7 +6,6 @@ const gastoSchema = new mongoose.Schema({
     valor:{type: Number, require},
     classificacao:{type:String, require},
     data:{type: String, require},
-    tipo:{type: String, require}
 })
 
 const gastos = mongoose.model('gastos', gastoSchema)
