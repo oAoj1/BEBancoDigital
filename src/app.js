@@ -13,6 +13,8 @@ const MetodoRoute = require('./routes/MetodoRoute.js')
 const DepositoRoute = require('./routes/DepositoRoute.js')
 const SomasGeraisRoute = require('./routes/SomasGeraisRoute.js')
 const SaldoDivididoRoute = require('./routes/SaldoDivididoRoute.js')
+const UsuarioRoute = require('./routes/UsuarioRoute.js')
+const HistoricoRoute = require('./routes/HistoricosRoute.js')
 
 const port = process.env.PORT
 
@@ -24,7 +26,9 @@ app.use(
     MetodoRoute,
     DepositoRoute,
     SomasGeraisRoute,
-    SaldoDivididoRoute
+    SaldoDivididoRoute,
+    UsuarioRoute,
+    HistoricoRoute
 )
 
 app.listen(port, () => {
